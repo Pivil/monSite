@@ -1,7 +1,14 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<body id="page-top">
+<div class="carousel">
 
-  <img src="/img/claim.png"/>
+
+  {{ range (where .Site.Pages "Section" "projects")}}
+  <a class="carousel-item" href="#one!"><img src="{{ .Params.photo }}"></a>
+  {{ .Content }} </p>
+
+  {{ end }}
+</div>
+
 </body>
